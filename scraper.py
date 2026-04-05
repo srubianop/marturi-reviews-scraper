@@ -962,10 +962,12 @@ def main():
                 continue
 
             # Construir producto para scraping
+            # Use Shopify ID from productos.json, NOT the ML MCO ID
+            shopify_id = product.get("shopify_id", "")
             scrape_target = {
                 "url": best_match["permalink"],
                 "product_handle": handle,
-                "product_id": best_match["id"],
+                "product_id": shopify_id,
             }
 
             # Scrapear reviews

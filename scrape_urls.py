@@ -145,6 +145,15 @@ def scrape_dom_reviews(page, url):
     return reviews
 
 def main():
+    # Load productos.json for Shopify ID mapping
+    shopify_ids = {}
+    try:
+        with open("productos.json","r",encoding="utf-8") as f:
+            for p in json.load(f):
+                if p.get("handle") and p.get("shopify_id"):
+                    shopify_ids[p["handle"]] = p["shopify_id"]
+    except: pass
+
     registry = {}
     try:
         with open("reviews_registry.json","r",encoding="utf-8") as f:
@@ -183,7 +192,7 @@ def main():
                         "review_date": parse_date(r.get('date','')),
                         "reviewer_name": name,
                         "reviewer_email": email,
-                        "product_id": "",
+                        "product_id": shopify_ids.get(handle, ""),
                         "product_handle": handle,
                         "reply": "",
                         "picture_urls": pics,
