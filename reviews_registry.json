@@ -1,0 +1,419 @@
+{
+  "last_updated": "2026-04-05T01:00:00",
+  "total_reviews": 600,
+  "products": {
+    "palmers-crema-anti-estrías-embarazo-con-manteca-de-cacao---250ml": {
+      "title": "Palmer's Crema Anti-estrías Embarazo con Manteca de Cacao - 250ml",
+      "status": "success",
+      "reviews": 131,
+      "matched_url": "https://www.mercadolibre.com.co/crema-antiestrias-palmers-250-ml-embarazo-manteca-de-cacao/p/MCO22273248",
+      "last_scraped": "2026-04-05"
+    },
+    "spray-antiarrugas-downy-portátil-90ml--sin-plancha": {
+      "title": "Spray Antiarrugas Downy Portátil 90ml – Sin Plancha",
+      "status": "success",
+      "reviews": 2,
+      "matched_url": "https://www.mercadolibre.com.co/wrinkle-releaser-downy-500ml-2-w-travel-size-spray-fresh/p/MCO2060357147",
+      "last_scraped": "2026-04-05"
+    },
+    "berberina-hcl-500-mg--60-cápsulas-vegetales--puritans-pride": {
+      "title": "Berberina HCL 500 mg – 60 cápsulas vegetales | Puritan's Pride",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/berberina-500-mg-suplemento-60-capsulas-puritans-pride/up/MCOU2426498291",
+      "last_scraped": "2026-04-05"
+    },
+    "berberina-hcl-carlyle-500-mg--60-cápsulas-vegetarianas": {
+      "title": "Berberina HCL Carlyle 500 mg – 60 Cápsulas Vegetarianas",
+      "status": "success",
+      "reviews": 3,
+      "matched_url": "https://www.mercadolibre.com.co/suplemento-carlyle-berberine-hcl-500-mg-60-capsulas/p/MCO2060406382",
+      "last_scraped": "2026-04-05"
+    },
+    "ashwagandha-ksm-66-600mg--astragin--60-cápsulas-vegetales--marturi": {
+      "title": "Ashwagandha KSM-66® 600mg + AstraGin® | 60 Cápsulas Vegetales | MARTURI",
+      "status": "success",
+      "reviews": 3,
+      "matched_url": "https://www.mercadolibre.com.co/ashwagandha-premium-ksm66-600mg-con-astragin--extracto-de-raiz-estandarizado-al-5-withanolidos-para-maxima-potencia-y-absorcion-rapida/up/MCOU3123318089",
+      "last_scraped": "2026-04-05"
+    },
+    "raw-probiotic---probióticos-orgánicos-100-billones-ufc-34-cepas--sunshine-y-rain": {
+      "title": "Raw Probiotic - Probióticos Orgánicos 100 Billones UFC 34 Cepas | Sunshine & Rain",
+      "status": "success",
+      "reviews": 1,
+      "matched_url": "https://www.mercadolibre.com.co/probioticos-capsulas-organicos-100-billones-34-cepas/up/MCOU2430387680",
+      "last_scraped": "2026-04-05"
+    },
+    "combo-vaseline-intensive-care-cocoa-radiant-loción-600-ml--gel-oil-200-ml": {
+      "title": "Combo Vaseline Intensive Care Cocoa Radiant: Loción 600 ml + Gel Oil 200 ml",
+      "status": "no_match",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "esencia-de-vainilla-molina-250ml--vainilla-mexicana-original": {
+      "title": "Esencia de Vainilla Molina 250ml | Vainilla Mexicana Original",
+      "status": "success",
+      "reviews": 3,
+      "matched_url": "https://www.mercadolibre.com.co/molina-vainilla-mexicana-x-250ml/up/MCOU2430160899",
+      "last_scraped": "2026-04-05"
+    },
+    "crema-palmers-manteca-de-cacao-para-estrías--hidratación-48h": {
+      "title": "Crema Palmer's Manteca de Cacao para Estrías | Hidratación 48h",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/crema-de-manteca-de-cacao-palmers-para-estrias-125-g/p/MCO2072611438",
+      "last_scraped": "2026-04-05"
+    },
+    "medicube-crema-pdrn-colágeno-rosa--adn-salmón--colágeno-marino--original-corea": {
+      "title": "Medicube Crema PDRN Colágeno Rosa | ADN Salmón + Colágeno Marino | Original Corea",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "ashwagandha-500mg--bioperine--120-cápsulas--bronson--60-días": {
+      "title": "Ashwagandha 500mg + BioPerine | 120 Cápsulas | Bronson | 60 Días",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "probiotic-10-puritans-pride-20-billones-cfu---10-cepas--30-cápsulas": {
+      "title": "Probiotic 10 Puritan's Pride 20 Billones CFU - 10 Cepas | 30 Cápsulas",
+      "status": "success",
+      "reviews": 2,
+      "matched_url": "https://www.mercadolibre.com.co/suplemento-probiotico-puritans-pride-acidophilus-capsula/p/MCO2055939425",
+      "last_scraped": "2026-04-05"
+    },
+    "ashwagandha-ksm-66-600mg---60-cápsulas-concentrado-premium--primaforce--30-días": {
+      "title": "Ashwagandha KSM-66 600mg - 60 Cápsulas Concentrado Premium | Primaforce | 30 Días",
+      "status": "success",
+      "reviews": 3,
+      "matched_url": "https://www.mercadolibre.com.co/ashwagandha-premium-ksm66-600mg-con-astragin--extracto-de-raiz-estandarizado-al-5-withanolidos-para-maxima-potencia-y-absorcion-rapida/up/MCOU3123318089",
+      "last_scraped": "2026-04-05"
+    },
+    "ashwagandha-500mg---120-cápsulas-veganas-sin-omg--horbaach--60-días": {
+      "title": "Ashwagandha 500mg - 120 Cápsulas Veganas Sin OMG | Horbaach | 60 Días",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "stubbs-hickory---humo-líquido": {
+      "title": "Stubb's Hickory - Humo Líquido",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "extracto-de-vainilla-puro-great-value-59-ml": {
+      "title": "Extracto De Vainilla Puro Great Value 59 Ml",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "probiótico-con-prebiótico-120-mil-millones-ufc-omogs---60-cápsulas--salud-digestiva": {
+      "title": "Probiótico con Prebiótico 120 Mil Millones UFC Omogs - 60 Cápsulas | Salud Digestiva",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "one-a-day-multivitaminico-prenatal-completo": {
+      "title": "One A Day Multivitaminico Prenatal Completo",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-crema-manteca-de-cacao-hidratante-40g": {
+      "title": "Vaseline Crema Manteca De Cacao Hidratante 40g",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-cocoa-glow-75ml---hidratación-48h-con-cacao---crema": {
+      "title": "Vaseline Cocoa Glow 75ml - Hidratación 48h Con Cacao - Crema",
+      "status": "success",
+      "reviews": 5,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "ácido-alfa-lipoico-ala-biotina-600mg-90-cápsulas-antioxidante": {
+      "title": "Ácido Alfa Lipoico Ala Biotina 600mg 90 Cápsulas Antioxidante",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-spray-hidratante-corporal-intensive-care-184-ml": {
+      "title": "Vaseline Spray Hidratante Corporal Intensive Care 184 Ml",
+      "status": "success",
+      "reviews": 2,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "cliganic-aceite-de-argán-60-ml-puro-orgánico-original": {
+      "title": "Cliganic Aceite De Argán 60 Ml Puro Orgánico Original",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-cocoa-radiant-aceite-corporal-hidratante-200ml--pack-x3": {
+      "title": "Vaseline Cocoa Radiant Aceite Corporal Hidratante 200ml | Pack x3",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "extracto-de-vainilla-orgánico-puro-60ml-madagascar": {
+      "title": "Extracto De Vainilla Orgánico Puro 60ml Madagascar",
+      "status": "success",
+      "reviews": 4,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-cocoa-radiant--crema-corporal-hidratante-con-manteca-de-cacao-600-ml": {
+      "title": "Vaseline Cocoa Radiant – Crema Corporal Hidratante con Manteca de Cacao 600 ml",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "palmers-loción-reafirmante-corporal-con-vitamina-e-q10-y-manteca-de-cacao-350ml": {
+      "title": "Palmer's Loción Reafirmante Corporal con Vitamina E, Q10 y Manteca de Cacao 350ml",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "tide-to-go-x3--bolígrafo-quitamanchas-instantáneo-para-ropa": {
+      "title": "Tide To Go x3 | Bolígrafo Quitamanchas Instantáneo para Ropa",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "ashwagandha-ksm-66-120-cápsulas--extracto-5-withanólidos--natures-lab": {
+      "title": "Ashwagandha KSM-66® 120 Cápsulas – Extracto 5% Withanólidos | Nature's Lab",
+      "status": "success",
+      "reviews": 1,
+      "matched_url": "https://www.mercadolibre.com.co/supplement-natures-lab-ashwagandha-ksm-66-extract-120ct/p/MCO2063164848",
+      "last_scraped": "2026-04-05"
+    },
+    "aceite-de-trufa-blanca-la-tourangelle-250-ml--gourmet": {
+      "title": "Aceite de Trufa Blanca La Tourangelle 250 ml | Gourmet",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "berberina-hcl-1200mg--60-cápsulas-vegetales--apoyo-metabólico-y-glucosa": {
+      "title": "Berberina HCL 1200mg – 60 Cápsulas Vegetales | Apoyo Metabólico y Glucosa",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "citrato-de-magnesio-1800-mg--120-tabletas--sueño-y-relajación-muscular": {
+      "title": "Citrato de Magnesio 1800 mg | 120 Tabletas | Sueño y Relajación Muscular",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "resveratrol-1200-mg--antioxidante-natural-para-longevidad-y-salud-cardiovascular--30-cápsulas--kaya-naturals": {
+      "title": "Resveratrol 1200 mg | Antioxidante Natural para Longevidad y Salud Cardiovascular – 30 Cápsulas | Kaya Naturals",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "aceite-de-trufa-negra-la-tourangelle-250ml": {
+      "title": "Aceite de Trufa Negra La Tourangelle 250ml",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "set-aceite-de-trufa-blanca-y-negra-la-tourangelle--2-x-250ml--caja-de-regalo-gourmet": {
+      "title": "Set Aceite de Trufa Blanca y Negra La Tourangelle · 2 x 250ml · Caja de Regalo Gourmet",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "aceite-de-oliva-extra-virgen-con-trufa-negra-tuscanini-250ml": {
+      "title": "Aceite de Oliva Extra Virgen con Trufa Negra Tuscanini 250ml",
+      "status": "success",
+      "reviews": 1,
+      "matched_url": "https://www.mercadolibre.com.co/aceite-de-trufa-negra-tuscanini-elaborado-con-aceite-de-oli/p/MCO2068144981",
+      "last_scraped": "2026-04-05"
+    },
+    "extracto-de-vainilla-orgánico-sin-alcohol-watkins-59-ml--repostería-premium": {
+      "title": "Extracto de Vainilla Orgánico Sin Alcohol Watkins 59 ml | Repostería Premium",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "ashwagandha-1000mg--cápsulas-veganas-sin-aditivos--minature": {
+      "title": "Ashwagandha 1000mg | Cápsulas Veganas Sin Aditivos | MiNature",
+      "status": "success",
+      "reviews": 13,
+      "matched_url": "https://www.mercadolibre.com.co/ashwagandha-1000mg-180-capsulas-youtheory-sabor-sin-sabor/p/MCO38720819",
+      "last_scraped": "2026-04-05"
+    },
+    "omega-3-now-foods-1000mg--200-cápsulas-de-aceite-de-pescado-epa-dha": {
+      "title": "Omega-3 NOW Foods 1000mg | 200 Cápsulas de Aceite de Pescado EPA DHA",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "pack-sin-azúcar-jarabe-de-chocolate-hersheys-496-ml--caramelo-smuckers--2-botellas": {
+      "title": "Pack sin azúcar: Jarabe de Chocolate Hershey's 496 ml + Caramelo Smucker's | 2 botellas",
+      "status": "success",
+      "reviews": 32,
+      "matched_url": "https://www.mercadolibre.com.co/hersheys-jarabe-de-chocolate-cero-azucar-496g-xtrm-p/p/MCO20662878",
+      "last_scraped": "2026-04-05"
+    },
+    "shout-removedor-de-manchas-enzimático-triple-acción-650-ml": {
+      "title": "Shout Removedor de Manchas Enzimático Triple Acción 650 ml",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "aceite-corporal-palmers-cacao--vitamina-e--brillo-radiante-150-ml": {
+      "title": "Aceite Corporal Palmer's Cacao + Vitamina E – Brillo Radiante 150 ml",
+      "status": "success",
+      "reviews": 10,
+      "matched_url": "https://www.mercadolibre.com.co/body-oil-palmers-cocoa-butter-moisturizing-250ml-w-vitamin/p/MCO2034440455",
+      "last_scraped": "2026-04-05"
+    },
+    "berberina-hcl-1000mg-por-porción--60-cápsulas-vegetales--amazing-formulas": {
+      "title": "Berberina HCL 1000mg por porción – 60 cápsulas vegetales | Amazing Formulas",
+      "status": "success",
+      "reviews": 1,
+      "matched_url": "https://www.mercadolibre.com.co/amazing-formulas-berberina-1000mg-por-porcion-60-capsulas-suplemento--sin-omg--sin-gluten--fabricado-en-estados-unidos/up/MCOU3164010619",
+      "last_scraped": "2026-04-05"
+    },
+    "omega-3-now-foods-180-epa-120-dha--30-cápsulas--destilado-molecularmente": {
+      "title": "Omega-3 NOW Foods 180 EPA 120 DHA – 30 Cápsulas | Destilado Molecularmente",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "aceite-de-almendras-dulces-100-puro--118-ml-4-oz--now-solutions": {
+      "title": "Aceite de Almendras Dulces 100% puro – 118 ml (4 oz) | NOW Solutions",
+      "status": "success",
+      "reviews": 1,
+      "matched_url": "https://www.mercadolibre.com.co/aceite-de-almendras-dulces-now-100-puro-118ml-piel-cabello/up/MCOU3484499217",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-glazed-y-glisten-golden-hour--aceite-gel-corporal-glow-vanilla-cocoa": {
+      "title": "Vaseline Glazed & Glisten Golden Hour – Aceite Gel Corporal Glow (Vanilla Cocoa)",
+      "status": "success",
+      "reviews": 17,
+      "matched_url": "https://www.mercadolibre.com.co/vaseline-aceite-corporal-brillante-vanilla-cocoa-golden-hour-vanilla-cocoa/p/MCO59114048",
+      "last_scraped": "2026-04-05"
+    },
+    "vaseline-glazed-y-glisten-sunlit-glow--aceite-gel-corporal-glow-vanilla-cocoa": {
+      "title": "Vaseline Glazed & Glisten Sunlit Glow – Aceite Gel Corporal Glow (Vanilla Cocoa)",
+      "status": "success",
+      "reviews": 28,
+      "matched_url": "https://www.mercadolibre.com.co/vaseline-aceite-corporal-brillante-vanilla-cocoa-sunlit-glow/p/MCO59306825",
+      "last_scraped": "2026-04-05"
+    },
+    "vitamina-c-1000-mg--120-cápsulas--natures-lab": {
+      "title": "Vitamina C 1000 mg – 120 cápsulas | Nature's Lab",
+      "status": "success",
+      "reviews": 15,
+      "matched_url": "https://www.mercadolibre.com.co/colageno-hidrolizado-biotina-capsulas-blandas-puro-vitamina-c-1000mg-registro-invima-sabor-sin-sabor/p/MCO62685967",
+      "last_scraped": "2026-04-05"
+    },
+    "gel-de-baño-dove-deep-moisture-con-bomba-1l--hidratación-profunda": {
+      "title": "Gel de Baño Dove Deep Moisture con Bomba 1L – Hidratación Profunda",
+      "status": "no_reviews",
+      "reviews": 0,
+      "matched_url": "",
+      "last_scraped": "2026-04-05"
+    },
+    "zma-zinc--magnesio--vitamina-b6--180-cápsulas-vegetales--now-sports": {
+      "title": "ZMA (Zinc + Magnesio + Vitamina B6) – 180 cápsulas vegetales | NOW Sports",
+      "status": "success",
+      "reviews": 9,
+      "matched_url": "https://www.mercadolibre.com.co/zma-zinc-magnesio-vitamina-b6-90-capsulas-now-sports-sabor-na/p/MCO26004153",
+      "last_scraped": "2026-04-05"
+    },
+    "berberina-hcl-500mg-60-capsulas": {
+      "title": "berberina-hcl-500mg-60-capsulas",
+      "status": "success",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/berberina-500-mg-60-capsulas/up/MCOU2420507475",
+      "last_scraped": "2026-04-04"
+    },
+    "berberina-hcl-sin-sabor": {
+      "title": "berberina-hcl-sin-sabor",
+      "status": "success",
+      "reviews": 11,
+      "matched_url": "https://www.mercadolibre.com.co/suplemento-berberina-hcl-sin-sabor/p/MCO58480715",
+      "last_scraped": "2026-04-04"
+    },
+    "berberina-hcl-pura-500mcg": {
+      "title": "berberina-hcl-pura-500mcg",
+      "status": "success",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/berberina-hcl-pura-500-mcg-60-capsulas--calidad-premium-importada/up/MCOU2925528354",
+      "last_scraped": "2026-04-04"
+    },
+    "ashwagandha-ksm66-astragin": {
+      "title": "ashwagandha-ksm66-astragin",
+      "status": "success",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/ashwagandha-premium-ksm66-600mg-con-astragin--extracto-de-raiz-estandarizado-al-5-withanolidos-para-maxima-potencia-y-absorcion-rapida/up/MCOU3123318089",
+      "last_scraped": "2026-04-04"
+    },
+    "probioticos-organicos-100-billones": {
+      "title": "probioticos-organicos-100-billones",
+      "status": "success",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/probioticos-capsulas-organicos-100-billones-34-cepas/up/MCOU2430387680",
+      "last_scraped": "2026-04-04"
+    },
+    "ksm66-ashwagandha-600mg-60u": {
+      "title": "ksm66-ashwagandha-600mg-60u",
+      "status": "success",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/ksm66-ashwagandha-600mg--60u/up/MCOU3158480405",
+      "last_scraped": "2026-04-04"
+    },
+    "acido-alfa-lipoico-biotina": {
+      "title": "acido-alfa-lipoico-biotina",
+      "status": "success",
+      "reviews": 0,
+      "matched_url": "https://www.mercadolibre.com.co/acido-alfa-lipoico-ala-biotina-600mg-90-capsulas-antioxidante/up/MCOU3350893062",
+      "last_scraped": "2026-04-04"
+    },
+    "omega-3-now-180g": {
+      "title": "omega-3-now-180g",
+      "status": "success",
+      "reviews": 294,
+      "matched_url": "https://www.mercadolibre.com.co/suplemento-en-capsulas-blandas-now-suplementos-omega-3-de-omega-3-x-180g/p/MCO18924602",
+      "last_scraped": "2026-04-04"
+    },
+    "acido-alfa-lipoico-ala-biotina-600mg": {
+      "title": "acido-alfa-lipoico-ala-biotina-600mg",
+      "status": "success",
+      "reviews": 8,
+      "matched_url": "https://www.mercadolibre.com.co/acido-alfa-lipoico-ala-biotina-600mg-90-capsulas-antioxidante/up/MCOU3350893062",
+      "last_scraped": "2026-04-04"
+    }
+  }
+}
