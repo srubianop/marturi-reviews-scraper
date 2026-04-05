@@ -24,11 +24,11 @@
       "last_scraped": "2026-04-05"
     },
     "berberina-hcl-carlyle-500-mg--60-cápsulas-vegetarianas": {
-      "title": "Berberina HCL Carlyle 500 mg – 60 Cápsulas Vegetarianas",
+      "title": "berberina-hcl-carlyle-500-mg--60-cápsulas-vegetarianas",
       "status": "success",
-      "reviews": 3,
-      "matched_url": "https://www.mercadolibre.com.co/suplemento-carlyle-berberine-hcl-500-mg-60-capsulas/p/MCO2060406382",
-      "last_scraped": "2026-04-05"
+      "reviews": 11,
+      "matched_url": "https://www.mercadolibre.com.co/suplemento-berberina-hcl-sin-sabor/p/MCO58480715",
+      "last_scraped": "2026-04-04"
     },
     "ashwagandha-ksm-66-600mg--astragin--60-cápsulas-vegetales--marturi": {
       "title": "Ashwagandha KSM-66® 600mg + AstraGin® | 60 Cápsulas Vegetales | MARTURI",
@@ -143,11 +143,11 @@
       "last_scraped": "2026-04-05"
     },
     "ácido-alfa-lipoico-ala-biotina-600mg-90-cápsulas-antioxidante": {
-      "title": "Ácido Alfa Lipoico Ala Biotina 600mg 90 Cápsulas Antioxidante",
-      "status": "no_reviews",
-      "reviews": 0,
-      "matched_url": "",
-      "last_scraped": "2026-04-05"
+      "title": "ácido-alfa-lipoico-ala-biotina-600mg-90-cápsulas-antioxidante",
+      "status": "success",
+      "reviews": 8,
+      "matched_url": "https://www.mercadolibre.com.co/acido-alfa-lipoico-ala-biotina-600mg-90-capsulas-antioxidante/up/MCOU3350893062",
+      "last_scraped": "2026-04-04"
     },
     "vaseline-spray-hidratante-corporal-intensive-care-184-ml": {
       "title": "Vaseline Spray Hidratante Corporal Intensive Care 184 Ml",
@@ -304,11 +304,11 @@
       "last_scraped": "2026-04-05"
     },
     "omega-3-now-foods-180-epa-120-dha--30-cápsulas--destilado-molecularmente": {
-      "title": "Omega-3 NOW Foods 180 EPA 120 DHA – 30 Cápsulas | Destilado Molecularmente",
-      "status": "no_reviews",
-      "reviews": 0,
-      "matched_url": "",
-      "last_scraped": "2026-04-05"
+      "title": "omega-3-now-foods-180-epa-120-dha--30-cápsulas--destilado-molecularmente",
+      "status": "success",
+      "reviews": 294,
+      "matched_url": "https://www.mercadolibre.com.co/suplemento-en-capsulas-blandas-now-suplementos-omega-3-de-omega-3-x-180g/p/MCO18924602",
+      "last_scraped": "2026-04-04"
     },
     "aceite-de-almendras-dulces-100-puro--118-ml-4-oz--now-solutions": {
       "title": "Aceite de Almendras Dulces 100% puro – 118 ml (4 oz) | NOW Solutions",
@@ -359,13 +359,6 @@
       "matched_url": "https://www.mercadolibre.com.co/berberina-500-mg-60-capsulas/up/MCOU2420507475",
       "last_scraped": "2026-04-04"
     },
-    "berberina-hcl-sin-sabor": {
-      "title": "berberina-hcl-sin-sabor",
-      "status": "success",
-      "reviews": 11,
-      "matched_url": "https://www.mercadolibre.com.co/suplemento-berberina-hcl-sin-sabor/p/MCO58480715",
-      "last_scraped": "2026-04-04"
-    },
     "berberina-hcl-pura-500mcg": {
       "title": "berberina-hcl-pura-500mcg",
       "status": "success",
@@ -398,20 +391,6 @@
       "title": "acido-alfa-lipoico-biotina",
       "status": "success",
       "reviews": 0,
-      "matched_url": "https://www.mercadolibre.com.co/acido-alfa-lipoico-ala-biotina-600mg-90-capsulas-antioxidante/up/MCOU3350893062",
-      "last_scraped": "2026-04-04"
-    },
-    "omega-3-now-180g": {
-      "title": "omega-3-now-180g",
-      "status": "success",
-      "reviews": 294,
-      "matched_url": "https://www.mercadolibre.com.co/suplemento-en-capsulas-blandas-now-suplementos-omega-3-de-omega-3-x-180g/p/MCO18924602",
-      "last_scraped": "2026-04-04"
-    },
-    "acido-alfa-lipoico-ala-biotina-600mg": {
-      "title": "acido-alfa-lipoico-ala-biotina-600mg",
-      "status": "success",
-      "reviews": 8,
       "matched_url": "https://www.mercadolibre.com.co/acido-alfa-lipoico-ala-biotina-600mg-90-capsulas-antioxidante/up/MCOU3350893062",
       "last_scraped": "2026-04-04"
     }
