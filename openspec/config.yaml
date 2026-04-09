@@ -1,0 +1,67 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Python 3 + Playwright (web scraping)
+  Architecture: Single-file procedural scripts, CLI-based
+  Testing: No test framework (no pytest, no unittest)
+  Style: No linting/formatting config detected
+
+strict_tdd: false
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+    - Identify affected modules/packages
+  specs:
+    - Use Given/When/Then format for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group tasks by phase (infrastructure, implementation, testing)
+    - Use hierarchical numbering (1.1, 1.2, etc.)
+    - Keep tasks small enough to complete in one session
+  apply:
+    - Follow existing code patterns and conventions
+    - Load relevant coding skills for the project stack
+  verify:
+    - Manual testing required (no test infrastructure)
+    - Compare implementation against every spec scenario
+  archive:
+    - Warn before merging destructive deltas (large removals)
+
+testing:
+  strict_tdd: false
+  detected: 2026-04-06
+  
+  test_runner:
+    available: false
+    tool: null
+    command: null
+  
+  test_layers:
+    - layer: Unit
+      available: false
+      tool: "-"
+    - layer: Integration
+      available: false
+      tool: "-"
+    - layer: E2E
+      available: false
+      tool: "-"
+  
+  coverage:
+    available: false
+    command: "-"
+  
+  quality_tools:
+    - tool: Linter
+      available: false
+      command: "-"
+    - tool: Type checker
+      available: false
+      command: "-"
+    - tool: Formatter
+      available: false
+      command: "-"
