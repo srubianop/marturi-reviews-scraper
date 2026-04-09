@@ -27,3 +27,4 @@ Thumbs.db
 *.csv
 *.json
 reviews_*.csv
+!reviews_judgeme_template.csv

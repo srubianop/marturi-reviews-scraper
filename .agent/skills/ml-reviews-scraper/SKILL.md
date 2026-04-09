@@ -122,6 +122,7 @@ python scraper.py "URL" "handle" --headless
 
 ## Resources
 
+- **Template/sample**: `reviews_judgeme_template.csv` (solo encabezados; no es salida generada)
 - **Template**: See [assets/scraper.py](assets/scraper.py) for the complete, production-ready scraper
 - **CSV format**: Judge.me Direct Import expects: `title,body,rating,review_date,reviewer_name,reviewer_email,product_id,product_handle,reply,picture_urls`
 - **Date conversion**: ML dates like `05 oct 2023` → `2023-10-05 00:00:00 UTC`

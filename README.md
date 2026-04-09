@@ -2,6 +2,11 @@
 
 Scrapea **todas las reviews** de productos de Mercado Libre y las exporta como un CSV compatible con la importación masiva de **Judge.me** para Shopify.
 
+## Archivo base
+
+- `reviews_judgeme_template.csv` — plantilla/sample header-only para arrancar importaciones o copiar estructura
+- `reviews_judgeme.csv` — salida generada por defecto por el scraper
+
 ## Características
 
 - **API interna de ML** — Usa el endpoint `/noindex/catalog/reviews/{objectId}/search` para extraer texto, ratings y fechas de forma rápida y confiable
