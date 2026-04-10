@@ -18,6 +18,8 @@ Uso:
     python scraper.py "URL1" "handle1" "URL2" "handle2"
     python scraper.py "URL" "handle" -o output.csv
     python scraper.py "URL" "handle" --headless
+
+Por defecto escribe un raw export nuevo en exports/raw/.
 """
 
 import csv
@@ -27,6 +29,7 @@ import time
 import random
 import argparse
 import unicodedata
+from pathlib import Path
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
 from playwright.sync_api import sync_playwright
@@ -85,7 +88,9 @@ DOMINIOS_EMAIL = [
     "outlook.es", "icloud.com", "protonmail.com",
 ]
 
-OUTPUT_FILE = "reviews_judgeme.csv"
+REPO_ROOT = Path(__file__).resolve().parents[4]
+DEFAULT_RAW_EXPORT_DIR = REPO_ROOT / "exports" / "raw"
+DEFAULT_MANUAL_EXPORT_DIR = REPO_ROOT / "exports" / "manual"
 
 FIELDNAMES = [
     "title", "body", "rating", "review_date", "reviewer_name",
@@ -97,6 +102,48 @@ MONTH_ES = {
     "may": "05", "jun": "06", "jul": "07", "ago": "08",
     "sep": "09", "oct": "10", "nov": "11", "dic": "12",
 }
+
+
+def normalize_picture_urls(value) -> str:
+    if not value:
+        return ""
+
+    if isinstance(value, str):
+        candidates = re.split(r"[,;\n]+", value)
+    else:
+        candidates = list(value)
+
+    urls = []
+    seen = set()
+    for candidate in candidates:
+        url = str(candidate).strip()
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        urls.append(url)
+        if len(urls) == 5:
+            break
+
+    return ",".join(urls)
+
+
+def sanitize_export_segment(value: str) -> str:
+    segment = re.sub(r"[^A-Za-z0-9._-]+", "-", value.strip().lower())
+    return segment.strip(".-_") or "product"
+
+
+def build_raw_output_path(handles: list[str], now: datetime | None = None) -> Path:
+    now = now or datetime.utcnow()
+    timestamp = now.strftime("%Y%m%dT%H%M%S") + f"-{now.microsecond // 1000:03d}Z"
+    handle_segment = "-".join(sanitize_export_segment(handle) for handle in handles[:4] if handle)
+    if not handle_segment:
+        handle_segment = "reviews"
+    return DEFAULT_RAW_EXPORT_DIR / f"{timestamp}__{handle_segment}.csv"
+
+
+def ensure_export_workspace() -> None:
+    DEFAULT_RAW_EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+    DEFAULT_MANUAL_EXPORT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def parse_ml_date(date_str: str) -> str:
@@ -366,8 +413,8 @@ def format_for_judgeme(api_reviews: list, image_map: dict, product: dict) -> lis
         picture_urls = ""
         if body:
             key = body[:60]
-            if key in image_map:
-                picture_urls = ";".join(image_map[key])
+            if key in image_map and image_map[key]:
+                picture_urls = normalize_picture_urls(image_map[key])
 
         formatted.append({
             "title": title,
@@ -388,7 +435,7 @@ def format_for_judgeme(api_reviews: list, image_map: dict, product: dict) -> lis
 def main():
     parser = argparse.ArgumentParser(description="Mercado Libre → Judge.me Review Scraper")
     parser.add_argument("products", nargs="+", help="URLs and handles: url1 handle1 [url2 handle2 ...]")
-    parser.add_argument("-o", "--output", default=OUTPUT_FILE, help="Output CSV file (default: reviews_judgeme.csv)")
+    parser.add_argument("-o", "--output", default=None, help="Output CSV file (default: timestamped CSV in exports/raw/)")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
     args = parser.parse_args()
 
@@ -399,6 +446,8 @@ def main():
         url = items[i]
         handle = items[i + 1] if i + 1 < len(items) else url.split('/')[-1].split('?')[0]
         products.append({"url": url, "product_handle": handle, "product_id": ""})
+
+    ensure_export_workspace()
 
     all_reviews = []
 
@@ -424,8 +473,9 @@ def main():
 
         browser.close()
 
-    output_file = args.output
+    output_file = Path(args.output).expanduser() if args.output else build_raw_output_path([product["product_handle"] for product in products])
     if all_reviews:
+        output_file.parent.mkdir(parents=True, exist_ok=True)
         with open(output_file, "w", newline="", encoding="utf-8-sig") as f:
             writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
             writer.writeheader()

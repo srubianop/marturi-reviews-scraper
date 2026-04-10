@@ -4,8 +4,15 @@ Scrapea **todas las reviews** de productos de Mercado Libre y las exporta como u
 
 ## Archivo base
 
-- `reviews_judgeme_template.csv` — plantilla/sample header-only para arrancar importaciones o copiar estructura
-- `reviews_judgeme.csv` — salida generada por defecto por el scraper
+- `data/productos.json` — mapeo de productos/handles a Shopify IDs
+- `data/reviews_registry.json` — registro persistente de ejecuciones del scraper
+- `data/reviews_judgeme_template.csv` — plantilla/sample header-only para arrancar importaciones o copiar estructura
+- `data/legacy/` — CSVs históricos preservados por compatibilidad
+- `exports/raw/` — landing zone ignorada por git para exports crudos timestamped
+- `exports/manual/` — landing zone ignorada por git para suplementos manuales Judge.me-compatible
+- `reviews_judgeme.csv` — bundle final consolidado para importación downstream
+- `scripts/search/` — helpers de investigación y chequeo de Excel
+- `scripts/debug/` — helpers de inspección/debug puntuales
 
 ## Características
 
@@ -45,6 +52,34 @@ python scraper.py \
 python scraper.py "URL" "handle" -o mis_reviews.csv
 ```
 
+### Flujo recomendado
+
+El scraper ahora escribe por defecto un CSV nuevo en `exports/raw/` con nombre timestamped.
+Para generar el bundle final compatible con Judge.me:
+
+```bash
+python scripts/consolidate_reviews.py
+```
+
+La consolidación usa como referencia `data/reviews_judgeme_template.csv` y toma inputs crudos desde `exports/raw/`.
+
+Opcionalmente podés pasar inputs explícitos:
+
+```bash
+python scripts/consolidate_reviews.py exports/raw/20260409T221530-241Z__mi-producto.csv exports/manual/extra.csv
+```
+
+Herramientas de inspección:
+
+```bash
+python scripts/search/investigate.py --help
+python scripts/search/check_excel.py --help
+python scripts/debug/debug_reviews.py
+python scripts/debug/extract_catalog_id.py
+python scripts/debug/find_product.py
+python scripts/debug/search_product.py
+```
+
 ### Modo headless (servidores)
 
 ```bash
@@ -66,7 +101,15 @@ El archivo generado es compatible con **Judge.me Direct Import**:
 | `product_id` | ID del producto (opcional) |
 | `product_handle` | Slug del producto en Shopify |
 | `reply` | Respuesta del vendedor (vacío) |
-| `picture_urls` | URLs de imágenes separadas por `;` |
+| `picture_urls` | Hasta 5 URLs de imágenes por review, separadas por `,` |
+
+## CSV de suplementos manuales
+
+Los archivos en `exports/manual/` deben usar exactamente las mismas columnas Judge.me:
+
+`title, body, rating, review_date, reviewer_name, reviewer_email, product_id, product_handle, reply, picture_urls`
+
+`picture_urls` también debe ir separado por `,` y limitado a 5 URLs.
 
 ## Cómo funciona
 

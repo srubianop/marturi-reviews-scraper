@@ -6,7 +6,8 @@ import openpyxl, sys, io, unicodedata
 if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-DEFAULT_EXCEL = Path(__file__).resolve().parents[1] / "Shopify_Publicaciones_Exportación_0404221023.xlsx"
+BASE_DIR = Path(__file__).resolve().parents[2]
+DEFAULT_EXCEL = BASE_DIR / "Shopify_Publicaciones_Exportación_0404221023.xlsx"
 
 
 def parse_args():

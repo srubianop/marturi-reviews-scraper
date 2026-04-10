@@ -1,6 +1,6 @@
-# Skill Registry — marturi-reviews-scraper
+# Skill Registry — Reeviews Scraping
 
-Auto-generated: 2026-04-04
+Auto-generated: 2026-04-09
 
 ## Project-Level Skills
 
@@ -30,7 +30,8 @@ Auto-generated: 2026-04-04
 
 ## Project Conventions
 
-- **No AGENTS.md, CLAUDE.md, or other agent instruction files found**
+- **No root AGENTS.md / CLAUDE.md / GEMINI.md / .cursorrules / copilot-instructions.md found**
 - **License**: Apache-2.0
-- **Code style**: Single-file procedural Python, no formal linting/formatting config
+- **Code style**: Single-file procedural Python, CLI-first entrypoint
 - **Dependencies**: Playwright (sync API), Python stdlib only
+- **SDD config**: existing `openspec/config.yaml` marks testing as unavailable and `strict_tdd: false`

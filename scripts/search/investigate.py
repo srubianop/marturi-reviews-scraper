@@ -2,8 +2,9 @@ import argparse
 import json, re, unicodedata, openpyxl
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[1]
-DEFAULT_PRODUCTS = BASE_DIR / 'productos.json'
+BASE_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = BASE_DIR / 'data'
+DEFAULT_PRODUCTS = DATA_DIR / 'productos.json'
 DEFAULT_EXCEL = BASE_DIR / 'Shopify_Publicaciones_Exportación_0404221023.xlsx'
 
 def to_handle(title):

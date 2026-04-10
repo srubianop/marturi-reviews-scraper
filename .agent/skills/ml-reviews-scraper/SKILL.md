@@ -40,7 +40,7 @@ The scraper uses a **hybrid approach**:
 | Image matching | Match by first 60 chars of review body text |
 | CSV encoding | Use `utf-8-sig` (BOM) so Excel opens accents correctly |
 | Judge.me date format | `YYYY-MM-DD HH:MM:SS UTC` |
-| Multiple images | Separated by `;` in `picture_urls` column |
+| Multiple images | Export up to 5 image URLs per review, separated by `,` |
 
 ### Workflow
 
@@ -52,7 +52,7 @@ The scraper uses a **hybrid approach**:
 5. Navigate to iframe URL → scroll progressively → extract image URLs
 6. Match images to reviews by body text
 7. Assign Colombian names + realistic emails
-8. Output CSV with utf-8-sig encoding
+8. Write a timestamped raw CSV in `exports/raw/` with utf-8-sig encoding by default
 ```
 
 ## Code Examples
@@ -116,13 +116,18 @@ python scraper.py "URL1" "handle1" "URL2" "handle2"
 # Custom output file
 python scraper.py "URL" "handle" -o custom_output.csv
 
+# Consolidate raw + manual inputs into reviews_judgeme.csv
+python scripts/consolidate_reviews.py
+
 # Headless mode (for servers)
 python scraper.py "URL" "handle" --headless
 ```
 
 ## Resources
 
-- **Template/sample**: `reviews_judgeme_template.csv` (solo encabezados; no es salida generada)
+- **Template/sample**: `data/reviews_judgeme_template.csv` (solo encabezados; no es salida generada)
+- **Raw exports**: `exports/raw/` (timestamped, ignored by git)
+- **Manual supplements**: `exports/manual/` (Judge.me-compatible CSVs, ignored by git)
 - **Template**: See [assets/scraper.py](assets/scraper.py) for the complete, production-ready scraper
 - **CSV format**: Judge.me Direct Import expects: `title,body,rating,review_date,reviewer_name,reviewer_email,product_id,product_handle,reply,picture_urls`
 - **Date conversion**: ML dates like `05 oct 2023` → `2023-10-05 00:00:00 UTC`

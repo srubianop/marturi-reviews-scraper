@@ -1,17 +1,63 @@
 """Scrape reviews from direct ML product URLs - DOM scraping fallback."""
 import sys, io, csv, json, time, random, re
+from pathlib import Path
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
 if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-OUTPUT_FILE = "reviews_judgeme.csv"
 FIELDNAMES = ["title","body","rating","review_date","reviewer_name","reviewer_email","product_id","product_handle","reply","picture_urls"]
 MONTH_ES = {"ene":"01","feb":"02","mar":"03","abr":"04","may":"05","jun":"06","jul":"07","ago":"08","sep":"09","oct":"10","nov":"11","dic":"12"}
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = REPO_ROOT / "data"
+PRODUCTS_PATH = DATA_DIR / "productos.json"
+REGISTRY_PATH = DATA_DIR / "reviews_registry.json"
+DEFAULT_RAW_EXPORT_DIR = REPO_ROOT / "exports" / "raw"
+DEFAULT_MANUAL_EXPORT_DIR = REPO_ROOT / "exports" / "manual"
 
 NOMBRES = ["Carlos Andres Rodriguez","Juan Pablo Martinez","Andres Felipe Gomez","Luis Fernando Lopez","Diego Alejandro Herrera","Camilo Andres Torres","Sebastian David Morales","Miguel Angel Castro","Jose David Vargas","Santiago Andres Ortiz","Daniel Esteban Ruiz","Felipe Andres Mendoza","Oscar Julian Diaz","Nicolas Andres Herrera","Alejandro Gomez Silva","David Santiago Reyes","Mateo Andres Jimenez","Julian David Pena","Esteban Camilo Rojas","Ricardo Andres Montoya","Maria Fernanda Lopez","Ana Maria Garcia","Laura Valentina Martinez","Carolina Andrea Rodriguez","Paola Andrea Gomez","Valentina Herrera","Daniela Alejandra Torres","Sofia Isabel Morales","Camila Andres Castro","Luisa Fernanda Vargas","Andrea Marcela Ortiz","Natalia Andrea Ruiz","Mariana Alejandra Mendoza","Isabella Sofia Diaz","Gabriela Maria Reyes","Paula Andrea Jimenez","Sara Valentina Pena","Juliana Andrea Rojas","Catalina Maria Montoya","Valeria Alejandra Salazar","Ximena Andrea Cardenas","Lina Marcela Medina","Diana Carolina Navarro","Karen Julieth Acosta","Leidy Johana Guzman","Angie Tatiana Vega","Jennifer Andrea Castillo","Claudia Marcela Leon","Gloria Stella Munoz","Sandra Milena Figueroa"]
 DOMINIOS = ["gmail.com","hotmail.com","outlook.com","yahoo.com","live.com","gmail.com.co"]
+
+
+def normalize_picture_urls(value):
+    if not value:
+        return ""
+    if isinstance(value, str):
+        candidates = re.split(r"[,;\n]+", value)
+    else:
+        candidates = list(value)
+
+    urls = []
+    seen = set()
+    for candidate in candidates:
+        url = str(candidate).strip()
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        urls.append(url)
+        if len(urls) == 5:
+            break
+    return ",".join(urls)
+
+
+def sanitize_export_segment(value):
+    segment = re.sub(r"[^A-Za-z0-9._-]+", "-", value.strip().lower())
+    return segment.strip(".-_") or "product"
+
+
+def build_raw_output_path(handles, now=None):
+    now = now or datetime.utcnow()
+    timestamp = now.strftime("%Y%m%dT%H%M%S") + f"-{now.microsecond // 1000:03d}Z"
+    handle_segment = "-".join(sanitize_export_segment(handle) for handle in handles[:4] if handle)
+    if not handle_segment:
+        handle_segment = "reviews"
+    return DEFAULT_RAW_EXPORT_DIR / f"{timestamp}__{handle_segment}.csv"
+
+
+def ensure_export_workspace():
+    DEFAULT_RAW_EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+    DEFAULT_MANUAL_EXPORT_DIR.mkdir(parents=True, exist_ok=True)
 
 URLS = [
     ("acido-alfa-lipoico-ala-biotina-600mg", "https://www.mercadolibre.com.co/acido-alfa-lipoico-ala-biotina-600mg-90-capsulas-antioxidante/up/MCOU3350893062"),
@@ -145,10 +191,10 @@ def scrape_dom_reviews(page, url):
     return reviews
 
 def main():
-    # Load productos.json for Shopify ID mapping
+    # Load data/productos.json for Shopify ID mapping
     shopify_ids = {}
     try:
-        with open("productos.json","r",encoding="utf-8") as f:
+        with open(PRODUCTS_PATH,"r",encoding="utf-8") as f:
             for p in json.load(f):
                 if p.get("handle") and p.get("shopify_id"):
                     shopify_ids[p["handle"]] = p["shopify_id"]
@@ -156,12 +202,14 @@ def main():
 
     registry = {}
     try:
-        with open("reviews_registry.json","r",encoding="utf-8") as f:
+        with open(REGISTRY_PATH,"r",encoding="utf-8") as f:
             registry = json.load(f)
     except: pass
 
     all_formatted = []
     stats = []
+
+    ensure_export_workspace()
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
@@ -183,7 +231,7 @@ def main():
                 for i, r in enumerate(raw):
                     name = names[i % len(names)]
                     email = gen_email(name, i)
-                    pics = ";".join(r['images']) if r.get('images') else ""
+                    pics = normalize_picture_urls(r.get('images', []))
 
                     all_formatted.append({
                         "title": r.get('title','') or "Buena compra",
@@ -203,7 +251,8 @@ def main():
 
                 registry.setdefault("products",{})[handle] = {"title":handle,"status":"success","reviews":len(raw),"matched_url":url,"last_scraped":datetime.now().strftime("%Y-%m-%d")}
                 registry["total_reviews"] = sum(pp["reviews"] for pp in registry.get("products",{}).values() if pp.get("status")=="success")
-                with open("reviews_registry.json","w",encoding="utf-8") as f:
+                REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+                with open(REGISTRY_PATH,"w",encoding="utf-8") as f:
                     json.dump(registry, f, ensure_ascii=False, indent=2)
 
             except Exception as e:
@@ -217,14 +266,14 @@ def main():
         browser.close()
 
     if all_formatted:
-        import os
-        exists = os.path.isfile(OUTPUT_FILE) and os.path.getsize(OUTPUT_FILE) > 0
-        with open(OUTPUT_FILE, "a" if exists else "w", newline="", encoding="utf-8-sig") as f:
+        output_file = build_raw_output_path([handle for handle, _ in URLS])
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_file, "w", newline="", encoding="utf-8-sig") as f:
             w = csv.DictWriter(f, fieldnames=FIELDNAMES)
-            if not exists: w.writeheader()
+            w.writeheader()
             w.writerows(all_formatted)
         print(f"\n{'='*60}")
-        print(f"CSV updated: {OUTPUT_FILE}")
+        print(f"CSV generado: {output_file}")
         print(f"Reviews added: {len(all_formatted)}")
         print(f"{'='*60}")
 

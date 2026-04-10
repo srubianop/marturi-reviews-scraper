@@ -1,4 +1,7 @@
-"""Public CLI entrypoint for the Mercado Libre reviews scraper."""
+"""Public CLI entrypoint for the Mercado Libre reviews scraper.
+
+Delegates to the implementation that writes timestamped raw exports by default.
+"""
 
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path

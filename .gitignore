@@ -24,7 +24,15 @@ env/
 Thumbs.db
 
 # Generated files
+exports/
+tmp_reviews/
+ml-*.png
 *.csv
 *.json
 reviews_*.csv
-!reviews_judgeme_template.csv
+!data/
+!data/productos.json
+!data/reviews_registry.json
+!data/reviews_judgeme_template.csv
+!data/legacy/
+!data/legacy/*.csv
