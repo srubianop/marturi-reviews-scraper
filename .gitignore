@@ -26,6 +26,7 @@ Thumbs.db
 # Generated files
 exports/
 tmp_reviews/
+sdd/
 ml-*.png
 *.csv
 *.json
